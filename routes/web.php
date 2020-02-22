@@ -17,6 +17,7 @@
 
 Route::get('/', 'indexController@index')->name('index');
 Route::get('/search', 'indexController@search')->name('search');
+Route::post('/search', 'indexController@saveSuccess')->name('success');
 
 Route::resource('card','cardController');
 Route::resource('type','typeController');

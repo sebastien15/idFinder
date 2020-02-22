@@ -61,7 +61,9 @@
 					<div class="icon-box-item">
 						<div class="ib-text about">
 							<h5>Turi bande?</h5>
-							<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per incep-tos himenaeos. Suspendisse potenti. Ut gravida mattis.</p>
+							<p>
+								iyi ni company nyarwanda ifite intego zo kumenyesha no  kumenyekanisha; ibi bikaba bikorwa hifadhishijwe ikoranabuhanga.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -72,7 +74,7 @@
                             <div class="container">
                                 <form action="{{route('message.store')}}" class="contact-form" method="post">
 									@if(session('success'))
-										<p class="alert alert-success">{{ session('success') }}</p>
+										<p class="alert alert-success"><span id="session_closer">x</span>{{ session('success') }}</p>
 									@endif
 									@csrf
                                     <div class="row">

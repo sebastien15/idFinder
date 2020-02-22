@@ -133,7 +133,9 @@ Commom elements
 	font-weight: 700;
 	margin-bottom: 60px;
 }
-
+.disNone{
+	display: none;
+}
 /* buttons */
 
 .site-btn {
@@ -1260,4 +1262,13 @@ Loans Page
 		font-size: 18px;
 		color: #fff;
 	}
+
+	
+}
+/* miscelaneous styles */
+#session_closer{
+	font-size: 20px;
+	cursor: pointer;
+	font-weight: 800;
+	margin-right: 5px;
 }

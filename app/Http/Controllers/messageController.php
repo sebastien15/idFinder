@@ -21,7 +21,9 @@ class messageController extends Controller
      */
     public function index()
     {
-        //
+        $messages = Message::orderBy('id', 'DESC')->simplePaginate(30);
+
+        return view('admin/message/all')->with('messages',$messages);
     }
 
     /**
@@ -67,7 +69,9 @@ class messageController extends Controller
      */
     public function show($id)
     {
-        //
+        $message = Message::find($id);
+
+        return view('admin/message/single')->with('message', $message);
     }
 
     /**
@@ -90,7 +94,11 @@ class messageController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $message = Message::find($id);
+
+        $message->delete();
+
+        return redirect()->back()->with('success',"Message deleted successfully");
     }
 
     /**

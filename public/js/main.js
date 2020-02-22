@@ -133,6 +133,23 @@ $(window).on('load', function() {
 		}
 
 	});
-
+	$(".holder-box-displayer").click(function(){
+		$(".holder-box").fadeIn("slow");
+		var name		= $("#name_input").val();
+		var card_number = $("#card_number").val();
+		$.ajax({
+			type: "POST",
+			url: "{{route('success')}}",
+			data:{name: name, card_number:card_number},
+			success: function(response){
+				
+			}
+		});
+	});
+	
+	// session closer
+	$("#session_closer").click(function(){
+		$(this).parent().hide();
+	})
 })(jQuery);
 
